@@ -78,16 +78,16 @@ app.post("/ra-send-mail",urlencodedParser,function(req,res)
                     cid: 'logoimage'
                 }
             ];
-            // for(var item in attachmentsList)
-            // {
-            //   //  console.log(attachmentsList[item]);
-            //     var attachment = {
-            //         filename: attachmentsList[item],
-            //         path: __dirname + "/uploads/" +attachmentsList[item],
-            //         cid: 'image'+item
-            //     };
-            //     attachments.push(attachment);
-            // }
+            for(var item in attachmentsList)
+            {
+              //  console.log(attachmentsList[item]);
+                var attachment = {
+                    filename: attachmentsList[item],
+                    path: __dirname + "/uploads/" +attachmentsList[item],
+                    cid: 'image'+item
+                };
+                attachments.push(attachment);
+            }
             var message = {
                 from: user,
                 to: emailto,
