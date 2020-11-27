@@ -28,7 +28,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true })
 
 
 
-//multer
+//multera
 var multer  = require('multer');
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
