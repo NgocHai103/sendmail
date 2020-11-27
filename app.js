@@ -84,7 +84,7 @@ app.post("/ra-send-mail",urlencodedParser,function(req,res)
               //  console.log(attachmentsList[item]);
                 var attachment = {
                     filename: attachmentsList[item],
-                    path: __dirname + "/uploads/" +attachmentsList[item],
+                    path: __dirname + attachmentsList[item],
                     cid: 'image'+item
                 };
                 attachments.push(attachment);
