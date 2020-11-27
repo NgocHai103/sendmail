@@ -126,7 +126,7 @@ app.post('/upimage',urlencodedParser,function (req, res) {
         }else{
             console.log("Upload is okay");
            // console.log(req.file.filename); // Thông tin file đã upload
-            res.json({"result":1,"filename":req.file.path,"__dirname":__dirname});
+            res.json({"result":1,"filename":req.file.path,"__dirname":__dirname,"path":path.join(__dirname, 'uploads')});
         }
 
     });
