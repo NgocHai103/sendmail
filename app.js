@@ -107,14 +107,10 @@ app.post("/ra-send-mail",urlencodedParser,function(req,res)
             transport.sendMail(message, function(error, info) {
                 var a = {"result":"success"};
                 if(error){
-                    a = {"result":"success"};
-                    console.log(error.message);
+                    a = {"result":error.message};
                 }else{
                     a = {"result":info.response};
-                    console.log(info.response);
-                    
                 }
-                
                 res.json(a);
             });
             transport.close();
